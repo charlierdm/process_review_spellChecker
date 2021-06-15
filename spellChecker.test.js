@@ -30,12 +30,14 @@ describe("spellChecker", () => {
   });
 
   it("returns two words, both incorrectly spelt with tildas", () => {
-    expect(spellChecker("teh clokc", ["the", "clock"])).toEqual("~teh~ ~clokc~")
-  })
+    expect(spellChecker("teh clokc", ["the", "clock"])).toEqual(
+      "~teh~ ~clokc~"
+    );
+  });
 
   it("throws an error if passed an empty string", () => {
     expect(() => {
-      spellChecker("", ["sandwhich"]).toThrow("No words found.")
-    })
+      spellChecker("", ["sandwhich"]).toThrow("No words found.");
+    });
   });
 });
